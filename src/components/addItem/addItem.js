@@ -8,9 +8,8 @@ class addItem extends Component {
   };
 
   handleChange = (e) => {
-    console.log(e.target.id + ": " + e.target.value);
     this.setState({
-      [e.target.id]: e.target.value,
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -31,7 +30,7 @@ class addItem extends Component {
             type="text"
             value={this.state.product}
             placeholder="Enter Product"
-            id="product"
+            name="product"
             onChange={this.handleChange}
             required
           />
@@ -39,7 +38,7 @@ class addItem extends Component {
             type="number"
             value={this.state.price}
             placeholder="Enter Price"
-            id="price"
+            name="price"
             onChange={this.handleChange}
             required
           />

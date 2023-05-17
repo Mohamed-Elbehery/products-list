@@ -23,7 +23,6 @@ class App extends Component {
     this.state.items.length > 0
       ? (item.id = this.state.items[this.state.items.length - 1].id + 1)
       : (item.id = 1);
-    console.log(item.id);
     let items = this.state.items;
     items.push(item);
     this.setState({ items: items });
